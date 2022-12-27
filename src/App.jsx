@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Bot from "./components/header/Bot";
+import Header from "./components/header/Header"
+import Hero from './components/header/Hero';
+import About from './components/main/About';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      
-    </div>
+    <>
+      <Header/>
+      <Hero/>
+      <Bot/>
+      <About/>
+    </>
   )
 }
 

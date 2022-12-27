@@ -7,11 +7,13 @@
 html {
   @apply font-Poppins scroll-smooth;
 }
+
 body {
-  @apply box-border bg-gray-900 text-gray-100;
+  @apply bg-gray-900 text-gray-100;
 }
+
 .btn-primary {
-  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2 hover:bg-cyan-700;
+  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-4 px-7 flex items-center gap-2 hover:bg-cyan-800 transition-colors duration-500 ease-in-out;
 }
 
 .aboutImg::after {
