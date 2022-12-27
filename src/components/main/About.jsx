@@ -8,7 +8,7 @@ const About = () => {
     { text: "Companies Work", count: "06" },
   ];
   return (
-    <section id="about" className="py-10 text-white">
+    <section id="about" className="py-10 mb-16 text-white">
       <div className="text-center mt-8">
         <h3 className="text-4xl font-semibold">
           About <span className="text-cyan-600">Me</span>
@@ -42,7 +42,7 @@ const About = () => {
             </div>
           </div>
           <div className="mt-16 flex justify-center">
-            <div className="md:w-80 h-full relative w-8/12 max-w-sm aboutImg ">
+            <div className="md:w-80 h-full relative w-8/12 max-w-sm mb-6 aboutImg ">
               <img
                 src={perfil1}
                 alt=""
