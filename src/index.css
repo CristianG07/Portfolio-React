@@ -13,7 +13,7 @@ body {
 }
 
 .btn-primary {
-  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-full py-4 px-7 flex items-center gap-2 hover:bg-cyan-800 transition-colors duration-500 ease-in-out;
+  @apply bg-cyan-600 font-semibold text-white md:mx-0 mx-auto rounded-lg py-4 px-7 flex items-center gap-2 hover:bg-cyan-800 transition-colors duration-500 ease-in-out;
 }
 
 .aboutImg::after {
@@ -22,7 +22,7 @@ body {
 
 input,
 textarea {
-  @apply bg-gray-700 outline-none rounded-lg p-3;
+  @apply bg-gray-700 outline-none rounded-lg p-5;
 }
 ::placeholder {
   @apply text-lg;

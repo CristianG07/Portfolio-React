@@ -1,3 +1,4 @@
+import Footer from "./components/footer/Footer";
 import Bot from "./components/header/Bot";
 import Header from "./components/header/Header"
 import Hero from './components/header/Hero';
@@ -17,6 +18,7 @@ function App() {
       <Skills/>
       <Projects/>
       <Contact/>
+      <Footer/>
     </>
   )
 }

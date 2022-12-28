@@ -34,11 +34,11 @@ const Header = () => {
         <div
           className={` ${
             sticky ? "md:bg-white/0 bg-white" : "bg-white px-16"
-          } text-gray-900 md:block hidden px-7 py-2 font-medium rounded-bl-full`}
+          } text-gray-900 md:block hidden md:px-8 lg:px-20 px-4 py-3 font-medium rounded-bl-full`}
         >
-          <ul className="flex items-center gap-8 text-lg">
+          <ul className="flex items-center lg:gap-8 gap-6 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="hover:text-cyan-600">
+              <li key={i} className="hover:text-cyan-600 duration-700 ease-in-out">
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
