@@ -1,7 +1,4 @@
-import hero from "../../assets/images/business.png";
-import html_logo from "../../assets/images/html-logo.png";
-import javascript_logo from "../../assets/images/javascript-logo.png";
-import css_logo from "../../assets/images/css-logo.png";
+import hero from "../../assets/images/hero_img.png";
 
 const Hero = () => {
   const social_media = [
@@ -13,19 +10,14 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen md:max-w-4xl lg:max-w-6xl max-w-3xl mx-auto flex md:flex-row flex-col items-center"
+      className="min-h-screen md:max-w-4xl lg:max-w-6xl max-w-3xl mx-auto flex md:flex-row flex-col items-center gap-8"
     >
-      <div className="flex-1 flex items-center mt-20 md:mt-0 justify-center">
-        <div className="relative">
-        <img src={hero} alt="" className="md:w-[330px] w-4/5 mx-auto object-cover"/>
-        <img src={html_logo} alt="" className="w-2/12 absolute top-10 md:right-0 right-6 object-cover"/>
-        <img src={css_logo} alt="" className="w-2/12 absolute top-6 lg:-left-16 md:-left-8 -left-4 object-cover"/>
-        <img src={javascript_logo} alt="" className="w-2/12 absolute bottom-6 object-cover"/>
-        </div>
+      <div className="flex-1 flex items-center mt-20 mb-5 md:mt-0 justify-center">
+        <img src={hero} alt="" className="md:w-4/5 w-3/5 mx-auto object-cover"/>
       </div>
       <div className="flex-1">
         <div className="md:text-left text-center">
-          <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold">
+          <h1 className="md:text-4xl lg:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold">
             <span className="text-cyan-600 md:text-6xl text-5xl">
               Hello!
               <br />
