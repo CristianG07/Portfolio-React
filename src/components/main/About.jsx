@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import perfil1 from "../../assets/images/perfil2.png";
+import { aboutVariant, btnVariant } from './../../animations/GlobalVariants';
 
 const About = () => {
   const info = [
@@ -14,7 +15,12 @@ const About = () => {
           About <span className="text-cyan-600">Me</span>
         </h3>
         <p className="text-gray-400 my-3 text-lg">My introduction</p>
-        <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-5xl mx-auto">
+        <motion.div
+          variants={aboutVariant}
+          initial='hidden'
+          whileInView='visible'
+          transition={{type: "spring", stiffness: 40}}
+          className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-5xl mx-auto">
           <div className="p-2">
             <div className="text-gray-300 my-3 grid gap-6 max-w-xl">
               <p className="text-justify">
@@ -36,9 +42,10 @@ const About = () => {
               </div>
               <div>
                 <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.8 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  variants={btnVariant}
+                  whileHover="stateHover"
+                  whileTap="active"
+                  transition={{type: "spring", stiffness: 400, damping: 17}}
                   href="./src/assets/Code_a_program.pdf" className="btn-primary w-fit" download>
                   Download CV
                 </motion.a>
@@ -54,7 +61,7 @@ const About = () => {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

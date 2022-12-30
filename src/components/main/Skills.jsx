@@ -40,6 +40,19 @@ const Skills = () => {
       style: "shadow-orange-600",
     },
   ];
+
+  const cartSkillVariant = {
+    hidden: {
+      scaleY: 0
+    },
+    visible: {
+      scaleY: 1.0,
+      whileHover: {
+        scale: 1.05
+      },
+      transition: { type: "tween", duration:0.1 }
+    }
+  }
   
   return (
     <section id="skills" className="py-16 bg-gray-800 relative">
@@ -51,10 +64,9 @@ const Skills = () => {
         <div className="grid sm:w-4/5 w-full grid-cols-2 sm:grid-cols-3 mx-auto px-12 py-10 gap-9">
           {skills?.map((skill, i) => (
             <motion.div
-              initial={{ scaleY: 0.1 }}
-              whileInView={{ scaleY: 1.0 }}
-              whileHover={{scale: 1.05}}
-              transition={{ type: "tween", stiffness: 10 }}
+              variants={cartSkillVariant}
+              initial='hidden'
+              whileInView='visible'
               key={i} className={`shadow-[0px_0px_12px_2px] duration-500 py-2 rounded-lg ${skill.style}`}>
                 <img src={skill.src} className='w-20 mx-auto'/>
                 <p className="mt-4">{skill.title}</p>

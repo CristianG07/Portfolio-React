@@ -1,5 +1,6 @@
 import hero from "../../assets/images/hero_img1.svg";
-import { motion, useScroll } from 'framer-motion';
+import { motion } from "framer-motion";
+import { btnVariant } from './../../animations/GlobalVariants';
 
 const Hero = () => {
 
@@ -43,9 +44,10 @@ const Hero = () => {
           </h4>
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.8 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            variants={btnVariant}
+            whileHover="stateHover"
+            whileTap="active"
+            transition={{type: "spring", stiffness: 400, damping: 17}}
             className="btn-primary mt-6 w-fit">Contact Me</motion.a>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((icon) => (

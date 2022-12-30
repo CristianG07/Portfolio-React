@@ -1,5 +1,6 @@
 import { UilPhone, UilEnvelope, UilMapMarker, UilWhatsapp } from '@iconscout/react-unicons'
 import {motion} from 'framer-motion'
+import { aboutVariant, btnVariant } from './../../animations/GlobalVariants';
 
 const Contact = () => {
   const contact_info = [
@@ -27,7 +28,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-10 px-3 text-white">
-      <div className="text-center mt-8">
+      <div
+        
+        className="text-center mt-8">
         <h3 className="text-4xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>
         </h3>
@@ -37,7 +40,12 @@ const Contact = () => {
           className="mt-16 flex flex-col sm:flex-row justify-center
          sm:gap-3 gap-6 lg:gap-10 md:p-6 p-2 w-full rounded-lg lg:max-w-5xl lg:mx-auto"
         >
-          <div className="flex flex-col gap-7 ">
+          <motion.div
+            variants={aboutVariant}
+            initial='hidden'
+            whileInView='visible'
+            transition={{type: "spring", stiffness: 40}}
+            className="flex flex-col gap-7 ">
             {contact_info.map((contact, i) => (
               <div
                 key={i}
@@ -55,8 +63,13 @@ const Contact = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <form className="flex flex-col w-full flex-1 mx-auto sm:w-2/5 md:w-3/5 gap-4">
+          </motion.div>
+          <motion.form
+            variants={aboutVariant}
+            initial='hidden'
+            whileInView='visible'
+            transition={{type: "spring", stiffness: 40}}
+            className="flex flex-col w-full flex-1 mx-auto sm:w-2/5 md:w-3/5 gap-4">
             <div className='flex justify-between flex-col md:flex-row gap-3'>
               <input type="text" className='md:w-1/2 w-full' placeholder="Name" />
               <input type="text" className='md:w-1/2 w-full' placeholder="Email" />
@@ -64,11 +77,12 @@ const Contact = () => {
             <input type="Email" placeholder="Project" />
             <textarea placeholder="Your Message" rows={10} className="resize-none"></textarea>
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              variants={btnVariant}
+              whileHover="stateHover"
+              whileTap="active"
+              transition={{type: "spring", stiffness: 400, damping: 17}}
               className="btn-primary w-fit">Send Message</motion.button>
-          </form>
+          </motion.form>
         </div>
       </div>
     </section>
