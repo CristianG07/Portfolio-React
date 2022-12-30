@@ -1,4 +1,4 @@
-import React from "react";
+import {motion} from "framer-motion";
 import perfil1 from "../../assets/images/perfil2.png";
 
 const About = () => {
@@ -35,9 +35,13 @@ const About = () => {
                 ))}
               </div>
               <div>
-                <a href="./src/assets/Code_a_program.pdf" className="btn-primary w-fit" download>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.8 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  href="./src/assets/Code_a_program.pdf" className="btn-primary w-fit" download>
                   Download CV
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>

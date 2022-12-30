@@ -5,6 +5,7 @@ import logo_react from "../../assets/images/skills_img/reactjs.png";
 import logo_tailwind from "../../assets/images/skills_img/tailwind.png";
 import logo_mogodb from "../../assets/images/skills_img/mongodb.png";
 import logo_git from "../../assets/images/skills_img/git.png";
+import {motion} from 'framer-motion';
 
 const Skills = () => {
   const skills = [
@@ -41,18 +42,23 @@ const Skills = () => {
   ];
   
   return (
-    <section id="skills" className="py-10 bg-gray-800 relative">
-      <div className="mt-8 text-gray-100 text-center">
+    <section id="skills" className="py-16 bg-gray-800 relative">
+      <div className="mt-8 text-gray-100 text-center lg:max-w-6xl mx-auto">
         <h3 className="text-4xl font-semibold">
           My <span className="text-cyan-600">Skills</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
-        <div className="grid sm:w-4/5 w-full grid-cols-2 sm:grid-cols-3 mx-auto px-12 py-8 gap-9">
+        <div className="grid sm:w-4/5 w-full grid-cols-2 sm:grid-cols-3 mx-auto px-12 py-10 gap-9">
           {skills?.map((skill, i) => (
-            <div key={i} className={`shadow-[0px_0px_12px_2px] hover:scale-105 duration-500 py-2 rounded-lg ${skill.style}`}>
-              <img src={skill.src} className='w-20 mx-auto'/>
-              <p className="mt-4">{skill.title}</p>
-            </div>
+            <motion.div
+              initial={{ scaleY: 0.1 }}
+              whileInView={{ scaleY: 1.0 }}
+              whileHover={{scale: 1.05}}
+              transition={{ type: "tween", stiffness: 10 }}
+              key={i} className={`shadow-[0px_0px_12px_2px] duration-500 py-2 rounded-lg ${skill.style}`}>
+                <img src={skill.src} className='w-20 mx-auto'/>
+                <p className="mt-4">{skill.title}</p>
+            </motion.div>
           ))}
         </div>
       </div>

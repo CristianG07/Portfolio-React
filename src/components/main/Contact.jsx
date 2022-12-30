@@ -1,4 +1,5 @@
 import { UilPhone, UilEnvelope, UilMapMarker, UilWhatsapp } from '@iconscout/react-unicons'
+import {motion} from 'framer-motion'
 
 const Contact = () => {
   const contact_info = [
@@ -15,7 +16,7 @@ const Contact = () => {
     { 
       logo: <UilEnvelope size='30'/>, 
       title: "Email", 
-      text: "cristiangfrontend07@gmail.com" 
+      text: "crisgonzalez07g@gmail.com" 
     },
     {
       logo: <UilMapMarker size='30'/>,
@@ -61,8 +62,12 @@ const Contact = () => {
               <input type="text" className='md:w-1/2 w-full' placeholder="Email" />
             </div>
             <input type="Email" placeholder="Project" />
-            <textarea placeholder="Your Message" rows={10}></textarea>
-            <button className="btn-primary w-fit">Send Message</button>
+            <textarea placeholder="Your Message" rows={10} className="resize-none"></textarea>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="btn-primary w-fit">Send Message</motion.button>
           </form>
         </div>
       </div>
