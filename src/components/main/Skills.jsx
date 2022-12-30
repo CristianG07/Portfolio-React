@@ -3,7 +3,6 @@ import logo_css from "../../assets/images/skills_img/css3.png";
 import logo_js from "../../assets/images/skills_img/js.png";
 import logo_react from "../../assets/images/skills_img/reactjs.png";
 import logo_tailwind from "../../assets/images/skills_img/tailwind.png";
-import logo_mogodb from "../../assets/images/skills_img/mongodb.png";
 import logo_git from "../../assets/images/skills_img/git.png";
 import {motion} from 'framer-motion';
 
