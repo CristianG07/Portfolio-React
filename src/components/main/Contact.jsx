@@ -1,8 +1,12 @@
 import { UilPhone, UilEnvelope, UilMapMarker, UilWhatsapp } from '@iconscout/react-unicons'
 import {motion} from 'framer-motion'
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { aboutVariant, btnVariant } from './../../animations/GlobalVariants';
 
 const Contact = () => {
+  const form = useRef();
+
   const contact_info = [
     { 
       logo: <UilPhone size='30'/>, 
@@ -25,6 +29,18 @@ const Contact = () => {
       text: "Colombia - Buenavetura",
     },
   ];
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_5gurw56', 'template_xtqqtti', form.current, 'JQW4TF_J-z_PIT8pE')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  }
 
   return (
     <section id="contact" className="py-10 px-3 text-white">
@@ -64,19 +80,20 @@ const Contact = () => {
               </div>
             ))}
           </motion.div>
-          <motion.form
+
+          <motion.form ref={form} onSubmit={sendEmail}
             variants={aboutVariant}
             initial='hidden'
             whileInView='visible'
             transition={{type: "spring", stiffness: 40}}
             className="flex flex-col w-full flex-1 mx-auto sm:w-2/5 md:w-3/5 gap-4">
             <div className='flex justify-between flex-col md:flex-row gap-3'>
-              <input type="text" className='md:w-1/2 w-full' placeholder="Name" />
-              <input type="text" className='md:w-1/2 w-full' placeholder="Email" />
+              <input type="text" className='md:w-1/2 w-full' placeholder="Name" name="user_name"/>
+              <input type="email" className='md:w-1/2 w-full' placeholder="Email" name="user_email"/>
             </div>
-            <input type="Email" placeholder="Project" />
-            <textarea placeholder="Your Message" rows={10} className="resize-none"></textarea>
-            <motion.button
+            <input type="text" placeholder="Project" name="project"/>
+            <textarea placeholder="Your Message" rows={10} className="resize-none" name="message"/>
+            <motion.button type='submit'
               variants={btnVariant}
               whileHover="stateHover"
               whileTap="active"
