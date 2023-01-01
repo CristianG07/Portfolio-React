@@ -1,6 +1,6 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import perfil1 from "../../assets/images/perfil2.png";
-import { aboutVariant, btnVariant } from './../../animations/GlobalVariants';
+import { aboutVariant, btnVariant } from "./../../animations/GlobalVariants";
 
 const About = () => {
   const info = [
@@ -17,17 +17,17 @@ const About = () => {
         <p className="text-gray-400 my-3 text-lg">My introduction</p>
         <motion.div
           variants={aboutVariant}
-          initial='hidden'
-          whileInView='visible'
-          transition={{type: "spring", stiffness: 40}}
-          className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-5xl mx-auto">
+          initial="hidden"
+          whileInView="visible"
+          transition={{ type: "spring", stiffness: 40 }}
+          className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-5xl mx-auto"
+        >
           <div className="p-2">
             <div className="text-gray-300 my-3 grid gap-6 max-w-xl">
               <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                ratione quibusdam doloribus pariatur consequuntur sint.
-                Reprehenderit cupiditate possimus facere quasi voluptatem?
+                I am a web developer (Front-End) very dedicated and committed to
+                what I do, Feel free to take a look at my latest projects on the
+                projects page.
               </p>
               <div className="flex items-center max-w-xl lg:justify-between justify-evenly gap-7">
                 {info.map((content) => (
@@ -45,8 +45,11 @@ const About = () => {
                   variants={btnVariant}
                   whileHover="stateHover"
                   whileTap="active"
-                  transition={{type: "spring", stiffness: 400, damping: 17}}
-                  href="./src/assets/Code_a_program.pdf" className="btn-primary w-fit" download>
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  href="./src/assets/Code_a_program.pdf"
+                  className="btn-primary w-fit"
+                  download
+                >
                   Download CV
                 </motion.a>
               </div>

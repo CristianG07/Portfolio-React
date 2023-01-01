@@ -1,8 +1,6 @@
 import project1 from "../../assets/images/project-1.png";
 import project2 from "../../assets/images/project-2.jpg";
 import project3 from "../../assets/images/project-3.jpg";
-import project4 from "../../assets/images/project-4.jpg";
-import project5 from "../../assets/images/project-5.png";
 import CardsPeject from "./CardsProject";
 
 const Projects = () => {
@@ -25,19 +23,7 @@ const Projects = () => {
       github_link: "https://github.com/Sridhar-C-25/highking",
       live_link: "https://highking01.netlify.app",
     },
-    {
-      img: project4,
-      name: "React Nav",
-      github_link:
-        "https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
-      live_link: "https://reacttailwindnavbar.netlify.app",
-    },
-    {
-      img: project5,
-      name: "Vue Country",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://vuecountry05.netlify.app",
-    },
+    
   ];
 
   return (

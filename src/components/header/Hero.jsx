@@ -5,10 +5,10 @@ import { btnVariant } from './../../animations/GlobalVariants';
 const Hero = () => {
 
   const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
+    {logo:"logo-instagram", href: "https://www.instagram.com/cristiangfrontend/"},
+    {logo:"logo-facebook", href: "https://www.facebook.com/profile.php?id=100076453703945"},
+    {logo:"logo-linkedin", href: "https://www.linkedin.com/in/cristiangfrontend/"},
+    {logo:"logo-twitter", href: "https://twitter.com/CristianG0725"},
   ];
 
   return (
@@ -55,7 +55,9 @@ const Hero = () => {
                 key={icon}
                 className="text-gray-600 hover:text-white cursor-pointer transition-colors duration-500 ease-in-out"
               >
-                <ion-icon name={icon}></ion-icon>
+                <a href={icon.href} target='_blank'>
+                  <ion-icon name={icon.logo}/>
+                </a>
               </div>
             ))}
           </div>
