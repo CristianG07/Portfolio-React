@@ -8,7 +8,7 @@ const Hero = () => {
     {logo:"logo-instagram", href: "https://www.instagram.com/cristiangfrontend/"},
     {logo:"logo-facebook", href: "https://www.facebook.com/profile.php?id=100076453703945"},
     {logo:"logo-linkedin", href: "https://www.linkedin.com/in/cristiangfrontend/"},
-    {logo:"logo-twitter", href: "https://twitter.com/CristianG0725"},
+    {logo:"logo-github", href: "https://github.com/CristianG07"},
   ];
 
   return (
