@@ -1,27 +1,20 @@
-import project1 from "../../assets/images/project-1.png";
-import project2 from "../../assets/images/project-2.jpg";
-import project3 from "../../assets/images/project-3.jpg";
+import project1 from "../../assets/images/project-2.jpg";
+import project2 from "../../assets/images/project-3.jpg";
 import CardsPeject from "./CardsProject";
 
 const Projects = () => {
   const projects = [
     {
       img: project1,
-      name: "Movie App",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://myreactflix.netlify.app",
+      name: "Job search Web App",
+      github_link: "https://github.com/CristianG07/jobsearchapp_landing",
+      live_link: "https://jobsearchapp-landing.vercel.app/",
     },
     {
       img: project2,
-      name: "Job search Web App",
-      github_link: "https://github.com/Sridhar-C-25/jobsearchapp",
-      live_link: "https://myjobsearch.netlify.app",
-    },
-    {
-      img: project3,
       name: "Highking",
-      github_link: "https://github.com/Sridhar-C-25/highking",
-      live_link: "https://highking01.netlify.app",
+      github_link: "https://github.com/CristianG07/highking_landing",
+      live_link: "https://highking-landing.vercel.app",
     },
     
   ];
