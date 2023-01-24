@@ -1,22 +1,29 @@
-import project1 from "../../assets/images/project-2.jpg";
-import project2 from "../../assets/images/project-3.jpg";
+import project1 from "../../assets/images/project-1.jpg";
+import project2 from "../../assets/images/project-2.jpg";
+import project3 from "../../assets/images/project-3.jpg";
+import project4 from "../../assets/images/project-4.jpg";
 import CardsPeject from "./CardsProject";
 
 const Projects = () => {
   const projects = [
     {
       img: project1,
+      name: "Landing page Forty",
+      github_link: "https://github.com/CristianG07/Forty-landing",
+      live_link: "https://forty-landing.vercel.app/",
+    },
+    {
+      img: project2,
       name: "Job search Web App",
       github_link: "https://github.com/CristianG07/jobsearchapp_landing",
       live_link: "https://jobsearchapp-landing.vercel.app/",
     },
     {
-      img: project2,
+      img: project3,
       name: "Highking",
       github_link: "https://github.com/CristianG07/highking_landing",
       live_link: "https://highking-landing.vercel.app",
     },
-    
   ];
 
   return (
