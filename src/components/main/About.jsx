@@ -4,9 +4,9 @@ import { aboutVariant, btnVariant } from "./../../animations/GlobalVariants";
 
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
+    { text: "Years experience", count: "03" },
     { text: "Completed Projects", count: "24" },
-    { text: "Companies Work", count: "06" },
+    { text: "Companies Work", count: "02" },
   ];
   return (
     <section id="about" className="py-10 mb-16 text-white">
