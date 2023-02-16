@@ -1,6 +1,7 @@
 import project1 from "../../assets/images/project-1.jpg";
 import project2 from "../../assets/images/project-2.jpg";
 import project3 from "../../assets/images/project-3.jpg";
+import project4 from "../../assets/images/project-4.jpg";
 import CardsPeject from "./CardsProject";
 
 const Projects = () => {
@@ -22,6 +23,12 @@ const Projects = () => {
       name: "Highking",
       github_link: "https://github.com/CristianG07/highking_landing",
       live_link: "https://highking-landing.vercel.app",
+    },
+    {
+      img: project4,
+      name: "Descuenta$",
+      github_link: "https://github.com/CristianG07/landing-descuentas.git",
+      live_link: "http://dev.descuentas.com/",
     },
   ];
 
